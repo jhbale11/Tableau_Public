@@ -1,14 +1,12 @@
-# Tableau_Public
+# [Vizable]World Population
 
 <img alt="Python" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>
 <img alt="Tableau" src ="https://img.shields.io/badge/Tableau-E97627.svg?&style=for-the-badge&logo=Tableau&logoColor=white"/>
 
 ## [My Tableau Public Profile](https://public.tableau.com/app/profile/.67511519/)
 
-[Project Link](https://public.tableau.com/views/VizableWorldPopulation_JH/1_1?:language=ko-KR&:display_count=n&:origin=viz_share_link)
-![Project Link]([Vizable]World_Population.png)
-
-This is the source code to my personal blog and website.
+## [Project Link](https://public.tableau.com/views/VizableWorldPopulation_JH/1_1?:language=ko-KR&:display_count=n&:origin=viz_share_link)
+![]([Vizable]World_Population.png)
 
 ## How it's built
 
