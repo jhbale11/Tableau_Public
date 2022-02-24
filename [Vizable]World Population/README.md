@@ -6,7 +6,7 @@
 ## [My Tableau Public Profile](https://public.tableau.com/app/profile/.67511519/)
 
 [Project Link](https://public.tableau.com/views/VizableWorldPopulation_JH/1_1?:language=ko-KR&:display_count=n&:origin=viz_share_link)
-![Project Link](/public/media/projects/harvey-williams/harvey-williams-homepage-21122018.jpg)
+![Project Link]([Vizable]World_Population.png)
 
 This is the source code to my personal blog and website.
 
