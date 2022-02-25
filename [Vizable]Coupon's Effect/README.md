@@ -43,29 +43,32 @@ Data Info
 4. 예시) 오후 5시~7시 사이의 transaction에서의 discount amt%가 시간 평균 discount amt% 보다 N% 더 높게 보여진다. 더 많은 customer을 유치하기 위해 customer transaction이 적은 시간대에 높은 할인 쿠폰을 준다.
 
 ### Methodology
-**(1) 매개 변수 : Selected Date**
-```bash
-Selected Date를 매개변수로 만들어서 해당 시점에서 현재까지의 수익률 계산에 사용하였습니다. Selected Date를 여러 시트에 동작으로 연동하여 Selected Date의 변화에 따라 생성한 여러 계산된 필드가 변화할 수 있도록 설정하였습니다.
-```
-**(2) 계산된 필드 : Sales on Selected Date, Volume on Selected Date**
+**(1) 매개 변수 : Coupon**
+
+> Coupon 매개변수로 만들어서 선택한 Coupon Discount Rate에 따라 여러 자료를 볼 수 있도록 하였습니다. Coupon을 여러 시트에 동작으로 연동하여 Coupon 선택의 변화에 따라 생성한 여러 계산된 필드가 변화할 수 있도록 설정하였습니다.
+
+**(2) 계산된 필드1,2 : Coupon Order, Coupon Items, Coupon Usage**
 ```SQL
-IF  MONTH([Date]) = MONTH([Selected Date]) THEN [Sales] END
-IF  MONTH([Date]) = MONTH([Selected Date]) THEN [Volume] END
+AVG(IF [Coupon] = [Coupon Discount] THEN [Order Amt Float] END)
+AVG(IF [Coupon] = [Coupon Discount] THEN [Num Of Items] END)
 ```
 
-**(3) Look Up 함수 : Value on Selected Date**
-Selected Date로부터 이후의 날짜에 대한 Date Range에 따른 종가의 평균값을 반환하도록 하였습니다.
+**(3) 계산된 필드3,4 : Coupon Usage, Coupon Reward**
 ```SQL
-LOOKUP(AVG([Close]), AVG(DATEDIFF('month',DATETRUNC('month', [Date]), DATETRUNC('month',[Selected Date]))))
+COUNT(IF [Coupon] = [Coupon Discount] THEN [Coupon Discount] END)
+COUNT(IF [Coupon] = [Coupon Discount] THEN [rewards_member] END)
 ```
+
+
+**(3) Weekly Count**
+주를 열로, 요일을 행으로 설정하여 Git Commit Trend Graph와 같은 형태의 차트를 생성하였습니다.
+![]()
+
 **(4) 동작**
-```bash
-매개 변수를 기준으로 한 동작 생성을 통해 시트와 시트 간 대화형 관계를 만들 수 있었습니다. Selected Date의 변화에 따라 모든 시트가 Dynamic하게 달라지도록 구현하였습니다.
-```
+>> 매개 변수를 기준으로 한 동작 생성을 통해 시트와 시트 간 대화형 관계를 만들 수 있었습니다. Coupon의 변화에 따라 모든 시트가 Dynamic하게 달라지도록 구현하였습니다.
 
 ### Insight
-- 특정 시점과 현재 시점과의 차이를 시각화할 수 있는 방법론을 구현하였습니다.
-- 주식 뿐만 아니라 펀드나 ETF 등 금융 시계열 데이터를 시각화하는데 활용하면 강력할 것 같습니다.
+- Coupon에 따라 달라지는 매출, 쿠폰 사용량, 판매 아이템 수를 시각화하고, 몇 퍼센트의 쿠폰에 민감하게 반응하는지 알아보고자 하였습니다. 데이터의 문제일 수 있으나 전반적으로 13%, 23%, 35%, 45% 등 각 십의 자리에서 중간 정도의 쿠폰의 사용량이 높았고, 매출, 판매 아이템 수도 높았음을 확인할 수 있었습니다.
 
 
 
