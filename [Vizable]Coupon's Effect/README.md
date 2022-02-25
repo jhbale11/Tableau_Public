@@ -33,7 +33,8 @@ Data Info
 - **Discount Amt** : 쿠폰을 사용했을 때 받은 할인율
 - **Order Amt** : 총 결제액
 
-### Concept & Problem
+
+## Concept & Problem
 
 유통 산업에서 `쿠폰`은 하나의 중요한 영역입니다. 이에 따라 C기업의 리더들은 발행한 쿠폰에 의한 전반적인 성과를 확인하고 싶어합니다.
 
@@ -42,7 +43,10 @@ Data Info
 3. 해당 데이터를 토대로 비즈니스 인사이트를 도출하여 작성 (가능하다면 데이터를 통한 비즈니스적 아이디어를 제안하기)
 4. 예시) 오후 5시~7시 사이의 transaction에서의 discount amt%가 시간 평균 discount amt% 보다 N% 더 높게 보여진다. 더 많은 customer을 유치하기 위해 customer transaction이 적은 시간대에 높은 할인 쿠폰을 준다.
 
-### Methodology
+**Problem : ** 기업에서 정해진 범위에서 동일한 확률로 랜덤 쿠폰 발행 이벤트를 하였을 때, 사용자의 구매 패턴을 분석한다면 다음 번 이벤트 때는 구매를 자극하는 할인율의 쿠폰을 발행하는 전략이 가능할 것입니다. 발행 받은 쿠폰의 할인율과 매출, 상품수, 쿠폰 사용수의 관계에서 인사이트를 얻어 다음 쿠폰 이벤트 때 이를 활용하고자 합니다.
+
+
+## Methodology
 **(1) 매개 변수 : Coupon**
 
 > Coupon 매개변수로 만들어서 선택한 Coupon Discount Rate에 따라 여러 자료를 볼 수 있도록 하였습니다. Coupon을 여러 시트에 동작으로 연동하여 Coupon 선택의 변화에 따라 생성한 여러 계산된 필드가 변화할 수 있도록 설정하였습니다.
@@ -59,15 +63,15 @@ COUNT(IF [Coupon] = [Coupon Discount] THEN [Coupon Discount] END)
 COUNT(IF [Coupon] = [Coupon Discount] THEN [rewards_member] END)
 ```
 
-
-**(3) Weekly Count**
+**(4) Weekly Count**
 주를 열로, 요일을 행으로 설정하여 Git Commit Trend Graph와 같은 형태의 차트를 생성하였습니다.
-![]()
+![](https://github.com/jhbale11/Tableau_Public/blob/5b6a5b6d7886b0a457468ff5287e8b59169c2e6c/%5BVizable%5DCoupon's%20Effect/Weekly%20Count.png)
 
-**(4) 동작**
->> 매개 변수를 기준으로 한 동작 생성을 통해 시트와 시트 간 대화형 관계를 만들 수 있었습니다. Coupon의 변화에 따라 모든 시트가 Dynamic하게 달라지도록 구현하였습니다.
+**(5) 동작**
+> 매개 변수를 기준으로 한 동작 생성을 통해 시트와 시트 간 대화형 관계를 만들 수 있었습니다. Coupon의 변화에 따라 모든 시트가 Dynamic하게 달라지도록 구현하였습니다.
 
-### Insight
+
+## Insight
 - Coupon에 따라 달라지는 매출, 쿠폰 사용량, 판매 아이템 수를 시각화하고, 몇 퍼센트의 쿠폰에 민감하게 반응하는지 알아보고자 하였습니다. 데이터의 문제일 수 있으나 전반적으로 13%, 23%, 35%, 45% 등 각 십의 자리에서 중간 정도의 쿠폰의 사용량이 높았고, 매출, 판매 아이템 수도 높았음을 확인할 수 있었습니다.
 
 
