@@ -29,7 +29,7 @@ Data Info
 - **Open -** 시가
 - **Volume -** 거래량
 
-### Concept & Problem
+## Concept & Problem
 
 Looking at how a metric has changed from the value at a specified reference date
 
