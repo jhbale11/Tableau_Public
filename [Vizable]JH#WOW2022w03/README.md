@@ -44,7 +44,8 @@ Looking at how a metric has changed from the value at a specified reference date
 6. Selected date에 따라 변화하는 Company 별 Stock Volume
 7. Selected date에 따라 변화하는 Company 별 Stock Sales
 
-### Methodology
+## Methodology
+
 **(1) 매개 변수 : Selected Date**
 ```bash
 Selected Date를 매개변수로 만들어서 해당 시점에서 현재까지의 수익률 계산에 사용하였습니다. Selected Date를 여러 시트에 동작으로 연동하여 Selected Date의 변화에 따라 생성한 여러 계산된 필드가 변화할 수 있도록 설정하였습니다.
@@ -65,7 +66,8 @@ LOOKUP(AVG([Close]), AVG(DATEDIFF('month',DATETRUNC('month', [Date]), DATETRUNC(
 매개 변수를 기준으로 한 동작 생성을 통해 시트와 시트 간 대화형 관계를 만들 수 있었습니다. Selected Date의 변화에 따라 모든 시트가 Dynamic하게 달라지도록 구현하였습니다.
 ```
 
-### Insight
+## Insight
+
 - 특정 시점과 현재 시점과의 차이를 시각화할 수 있는 방법론을 구현하였습니다.
 - 주식 뿐만 아니라 펀드나 ETF 등 금융 시계열 데이터를 시각화하는데 활용하면 강력할 것 같습니다.
 
