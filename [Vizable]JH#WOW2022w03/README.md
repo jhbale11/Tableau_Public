@@ -4,7 +4,7 @@
 
 ## [Project Link](https://public.tableau.com/app/profile/.67511519/viz/VizableJHWOW2022w03/2_1)
 
-![]([Vizable]JH#WOW2022w03.png)
+![]([Vizable]JH#WOW2022w03/[Vizable]JH#WOW2022w03.png)
 
 ## How it's built
 
