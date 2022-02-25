@@ -3,7 +3,7 @@
 ## [My Tableau Public Profile](https://public.tableau.com/app/profile/.67511519/)
 
 ## [Project Link](https://public.tableau.com/app/profile/.67511519/viz/VizableJHWOW2022w03/2_1)
-![]([Vizable]JH#WOW2022w03.png)
+![](https://github.com/jhbale11/Tableau_Public/blob/a95aca0e71ed191aa594b6c2316b5df3e378d0a2/%5BVizable%5DJH%23WOW2022w03/%5BVizable%5DJH%23WOW2022w03.png)
 
 ## How it's built
 
