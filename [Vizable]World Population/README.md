@@ -35,7 +35,7 @@ Data Info
 - **World Share_20 -** 2020년 기준 인구 수 차지 비율(%)
 - **GDP** - 국내 총 생산($)
 
-### Concept & Problem
+## Concept & Problem
 
 인구수와 출산율을 기준으로 Clustering을 통해 Cluster 별로 국내 총 생산, 나이 중위수, 인구 순증가와 이민자 정책에 대한 인사이트를 얻고자 하였습니다! 
 
@@ -43,7 +43,8 @@ Data Info
 **1. 인구가 많은 나라들은 출산에 대하여, 인구 증가에 대하여, 이민자에 대하여 어떤 접근을 하고 있을까?**
 **2. 인구수와 출산율을 기준으로 Clustering 하였을 때, Cluster 별로 어떤 특징을 보이게 될까?**
 
-### Methodology
+## Methodology
+
 ``` bash
 (1) Tableau Analysis 기능을 활용하여 인구수와 출산율을 기준으로 Clustering을 진행하였습니다.
 (2) Cluster의 지리적 분포를 한눈에 보기 위하여 Cluster Map을 생성하였습니다.
@@ -51,7 +52,8 @@ Data Info
 (4) Cluster 별 GDP를 보기 위하여 트리맵을 생성하였습니다.
 (5) 인구수 순증가와 이민자 순증가를 보기 위하여 이민자 순증가를 X축, 인구수를 Y축으로 설정하여 Scatter Plot을 생성하였습니다.
 ```
-### Insight
+## Insight
+
 - 출산율과 인구수에 대한 Clustering 분석을 통해 이민자 순증가, 출산율과의 관계에서 여러 인사이트를 얻을 수 있었습니다.
     - 중국과 인도로 묶인 Cluster는 매우 보수적인 출산 정책, 이민자 정책을 시행함을 확인할 수 있었습니다.
     - 중동-아프리카 내에서도 Cluster 별 출산율과 GDP의 음의 상관관계가 큼을 확인할 수 있었습니다.
